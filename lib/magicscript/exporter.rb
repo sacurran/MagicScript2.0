@@ -5,8 +5,8 @@ module MagicScript
 			@local_file=file
   			f = File.open(@local_file, 'r+')
  			@server_path='/web/'
- 			@ftp = Net::FTP::new('10.1.10.11')
-			@ftp.login('FTP-Custom', 'pw4FTP')
+ 			@ftp = Net::FTP::new()
+			@ftp.login()
 			@ftp.chdir(@server_path)
 		end
 
